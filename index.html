@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Sorry My Love</title>
+<style>
+ body {
+  background: linear-gradient(135deg, #fceabb 0%, #f8b500 100%);
+  /* Warm light gradient */
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0; padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #b30000;
+  margin-bottom: 30px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;  /* stack cards vertically */
+  gap: 20px;
+  max-width: 350px;
+  margin: 0 auto;
+  padding-bottom: 10px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  height: 90vh; /* height limit with scroll */
+}
+
+.card {
+  flex: none;
+  width: 100%;
+  perspective: 1000px;
+  opacity: 0;
+  transform: translateX(100%) scale(0.95);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+
+.frame {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background: white;
+  border-radius: 15px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.frame.flipped {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.front {
+  padding: 0;
+}
+
+.back {
+  padding: 15px;
+}
+
+.front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.back {
+  background-color: #fff5f5; /* lighter pink shade */
+  color: #800000;
+  transform: rotateY(180deg);
+  font-weight: bold;
+}
+
+.final-msg {
+  margin-top: 50px;
+  font-size: 1.5rem;
+  color: #660000; /* Darker maroon for better contrast */
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+
+}
+/* Chrome, Edge, Safari */
+.grid::-webkit-scrollbar {
+  width: 8px;
+}
+
+.grid::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 4px;
+}
+
+/* Firefox */
+.grid {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0,0,0,0.2) transparent;
+}
+
+</style>
+</head>
+<body>
+
+<h1>Majhya Hrudayapasun... "SORRY"</h1>
+
+<div class="grid" id="grid">
+  <!-- Cards -->
+  <div class="card">
+    <div class="frame">
+      <div class="front">
+        <img src="C:\Users\rohit\OneDrive\Desktop\Delta Html\Day1\IMG-20240402-WA0000.jpg" alt="Her Photo 1" />
+      </div>
+      <div class="back">Mi kharach khup chuklo 😔</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="frame">
+      <div class="front">
+        <img src="C:\Users\rohit\OneDrive\Desktop\Delta Html\Day1\1711794745436.jpg" alt="Her Photo 2" />
+      </div>
+      <div class="back">Tuzya vina mi apurn ahe 💔</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="frame">
+      <div class="front">
+        <img src="C:\Users\rohit\OneDrive\Desktop\Delta Html\Day1\IMG-20241025-WA0021.jpg" alt="Her Photo 3" />
+      </div>
+      <div class="back">Mala tula happy baghaych ahe 😊</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="frame">
+      <div class="front">
+        <img src="C:\Users\rohit\OneDrive\Desktop\Delta Html\Day1\IMG-20241025-WA0009.jpg" alt="Her Photo 4" />
+      </div>
+      <div class="back">Mi kadhi hi tula sad nahi bghu shkat</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="frame">
+      <div class="front">
+        <img src="C:\Users\rohit\OneDrive\Desktop\Delta Html\Day1\IMG-20240831-WA0008.jpg" alt="Her Photo 5" />
+      </div>
+      <div class="back">Me keleli chuk khup mothi ahe </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="frame">
+      <div class="front">
+        <img src="C:\Users\rohit\OneDrive\Desktop\Delta Html\Day1\IMG_20231020_214804_928.jpg" alt="Her Photo 6" />
+      </div>
+      <div class="back">Mi manapasun maafi magtoy</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="frame">
+      <div class="front">
+        <img src="C:\Users\rohit\OneDrive\Desktop\Delta Html\Day1\IMG_20231020_214754_736.jpg" alt="Her Photo 7" />
+      </div>
+      <div class="back">Tu majhya jagachi RANI ahes👑</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="frame">
+      <div class="front">
+        <img src="C:\Users\rohit\OneDrive\Desktop\Delta Html\Day1\1712468743963.jpg" alt="Her Photo 8" />
+      </div>
+      <div class="back">I Love you so much sonudii</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="frame">
+      <div class="front">
+        <img src="C:\Users\rohit\OneDrive\Desktop\Delta Html\Day1\IMG-20240831-WA0010.jpg" alt="Her Photo 9" />
+      </div>
+      <div class="back">Mi tula kadhi nahi sodnar</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="frame">
+      <div class="front">
+        <img src="C:\Users\rohit\OneDrive\Desktop\Delta Html\Day1\1710581390386.jpg" alt="Her Photo 10" />
+      </div>
+      <div class="back">Mayza life cha tuzya vachun khi meaning nhi ahe</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="frame">
+      <div class="front">
+        <img src="C:\Users\rohit\OneDrive\Desktop\Delta Html\Day1\new2.jpg" alt="Her Photo 11" />
+      </div>
+      <div class="back">Tu aahes tar mi ahe ❤️</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="frame">
+      <div class="front">
+        <img src="C:\Users\rohit\OneDrive\Desktop\Delta Html\Day1\new1.jpg" alt="Her Photo 12" />
+      </div>
+      <div class="back">Please give me one chance 😢</div>
+    </div>
+  </div>
+</div>
+
+<div class="final-msg">
+  "Majha ekach prayatna aahe – tula parat hasavnyaacha! Please forgive me, Pilluu..."
+</div>
+
+<script>
+  // Show cards one by one with delay
+  const cards = document.querySelectorAll('.card');
+
+  cards.forEach((card, index) => {
+    setTimeout(() => {
+      card.classList.add('visible');
+    }, index * 300); // 300ms delay between cards
+  });
+
+  // Flip on click toggling
+  document.querySelectorAll('.frame').forEach(frame => {
+    frame.addEventListener('click', () => {
+      frame.classList.toggle('flipped');
+    });
+  });
+</script>
+
+</body>
+</html>
